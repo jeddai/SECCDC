@@ -20,11 +20,18 @@
 5. Lock down SSH
     - `nano /etc/ssh/sshd_config` and find the line that looks like so
     ```
-    PasswordAuthentication <something here other than no>
+    PermitRootLogin <not no>
+    ...
+    PermitEmptyPasswords <not no>
+    ...
+    PasswordAuthentication <not no>
     ```
     and change it so that it says
     ```
+    PermitRootLogin no
+    ...
+    PermitEmptyPasswords no
+    ...
     PasswordAuthentication no
     ```
     Do ^X and save. Then run `service ssh restart && service sshd restart`.
-    -
