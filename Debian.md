@@ -1,4 +1,4 @@
-# Debian Email Launch Codes
+# Debian Launch Codes
 1. Starting off - enter root user by using `su - root` or just `su`.
 2. Update the crap out of it.
     - if you get a cdrom error when running `apt-get update` or `install` then go into `/etc/apt/sources.list` and comment out the cdrom lines
@@ -93,3 +93,5 @@
     Do ^X and save. Then run `service ssh restart && service sshd restart`.
 6. Lock down the Email server/clients
     - Protect the port (see the IPTables section)
+    - Make sure it's upgraded
+    - That's basically all you can do.
